@@ -55,19 +55,21 @@ namespace CloudApp.Controllers
                     url="https://myapps.microsoft.com/signin/Alibaba%20Cloud%20Service%20(EY-ALI-NON-PROD-A)/c214464e-f91a-452a-8670-93338655e186?tenantId=4667418b-7015-4ceb-b207-2193896769a8"
                 },
                  new TenantData()
-                {   tenantname="Type_B_NonProd",
+
+                {    Id="5",
+                     tenantname="Type_B_NonProd",
                     tenantID="4667418b-7015-4ceb-b207-2193896769a8",
                     url="https://myapps.microsoft.com/signin/Alibaba%20Cloud%20Service%20(EY-ALI-NON-PROD-B)/82527ae3-18f8-4ea8-9375-6954d3d03753?tenantId=4667418b-7015-4ceb-b207-2193896769a8"
                 },
 
                   new TenantData()
-                {  Id="5",
+                {  Id="6",
                       tenantname="SelfManaged_Dev",
                     tenantID="4667418b-7015-4ceb-b207-2193896769a8",
                     url="https://myapps.microsoft.com/signin/Alibaba%20Cloud%20Service%20(Role-based%20SSO)/c46e02f1-93d6-4251-a6a6-32e3ebee0c27?tenantId=4667418b-7015-4ceb-b207-2193896769a8"
                 },
                   new TenantData()
-                {   Id="6",
+                {   Id="7",
                       tenantname="SelfManaged_POC",
                     tenantID="4667418b-7015-4ceb-b207-2193896769a8",
                     url="https://myapps.microsoft.com/signin/Alibaba%20Cloud%20Service%20(Role-based%20SSO)/c46e02f1-93d6-4251-a6a6-32e3ebee0c27?tenantId=4667418b-7015-4ceb-b207-2193896769a8"
