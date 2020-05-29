@@ -1,0 +1,87 @@
+﻿@using CloudApp.Models;
+@model CloudApp.Models.TenantList;
+
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #D3D3D3;
+    }
+</style>
+<script>
+    function myFunction(Id) {
+        var elementId = "Id" + Id;
+        var copyText = document.getElementById(elementId).getAttribute("href");
+        var dummy = document.createElement("textarea");
+   
+    document.body.appendChild(dummy);
+   
+    dummy.value = copyText;
+    dummy.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummy);
+ 
+        alert("Copied the text: " + dummy.value);
+
+      
+
+    }
+</script>
+<h1 style="text-align:center">Alibaba_Tenants</h1>
+
+
+<table class="table table-hover">
+
+    <thead>
+        <tr style="font-size:20px;">
+            <th>Tenant Name</th>
+            <th>Tenant_ID</th>
+            <th>Url </th>
+            <th>Copy link</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in Model.tenantList)
+        {
+            <tr>
+                <td>@i.tenantname</td>
+                <td>@i.tenantID</td>
+
+
+
+                <td><a href="@i.url" target="_blank" id="@("Id"+i.Id)"> @i.url </a></td>
+                <td>
+
+
+
+                    <button onclick="myFunction(@i.Id)">Copy Link</button>
+
+
+
+
+
+
+                </td>
+
+
+            </tr>
+
+        }
+    </tbody>
+
+</table>
